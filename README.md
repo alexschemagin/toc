@@ -1,6 +1,8 @@
 Automatic Table of Contents + Waypoints.js
 ==========================================
 
+[Live demo](http://countereverything.com/github/toc/auto_toc.html)
+
 Every heading will generate a list item in a dynamically-generated, fixed list.
 
 ![alt tag](https://github.com/countereverything/toc/blob/master/ss1.jpg)
