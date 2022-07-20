@@ -12,7 +12,6 @@
 	<meta name="apple-mobile-web-app-capable" content="yes"/>
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 	<style>
-		@font-face{font-family:Roboto; src:url(Roboto-Regular.ttf);}
 		body,div, h1,h2,p, ol,ul,li {
 			margin: 0;
 			padding: 0;
@@ -32,6 +31,7 @@
 		@-ms-viewport { width: device-width; }
 		@-o-viewport { width: device-width; }
 		@viewport { width: device-width; }
+		html{scroll-behavior: smooth;}
 		html, body {min-height: 100%;}
 		body {
 			min-width: 290px;
@@ -40,7 +40,7 @@
 			-ms-text-size-adjust: 100%;
 			text-size-adjust: 100%;
 			color: #666666;
-			font: normal 100%/1.5 'Roboto', Helvetica, Arial, sans-serif;
+			font: normal 100%/1.5 Helvetica, Arial, sans-serif;
 		}
 		a {
 			color: #f4f4f4;
@@ -53,7 +53,7 @@
 			}
 		ul {list-style:none;}
 		h1, h3 {font-weight:normal; margin:0; padding:1em 0; color:#111111;}
-		
+
 		ul.table-of-contents {
 			height:100%;
 			left:0;
@@ -79,7 +79,7 @@
 					box-sizing: border-box;
 					-webkit-transition: background .3s ease;
 					-moz-transition: background .3s ease;
-					transition: background .3s ease;			
+					transition: background .3s ease;
 					display: block;
 					padding: .8em 1em;
 					width: 100%;
@@ -91,7 +91,7 @@
 						color:#000000;
 						border-bottom:1px solid rgba(0,0,0,0.4);
 					}
-		
+
 		article {background: #FFFFFF;}
 			article.main{
 				width:calc(100% - 240px);
@@ -115,7 +115,7 @@
 					width: 8px;
 					height: 8px;
 				}
-			
+
 		.main {
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
@@ -204,10 +204,10 @@
 			<p>Credibly reintermediate backend ideas for cross-platform models. Continually reintermediate integrated processes through technically sound intellectual capital. Holistically foster superior methodologies without market-driven best practices.</p>
 		</div>
 	</article>
-	
+
 	<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
 	<script>
-		var tableofcontents = "<ul class='table-of-contents'>";		
+		var tableofcontents = "<ul class='table-of-contents'>";
 		var el, title, link, newLine;
 		$("article h3").each(function() {
 			el = $(this);
@@ -215,11 +215,11 @@
 			link = "#" + el.attr("id");
 			newLine = "<li>" + "<a href='" + link + "'>" + title + "</a>" + "</li>";
 			tableofcontents += newLine;
-		});		
-		tableofcontents += "</ul>";		
+		});
+		tableofcontents += "</ul>";
 		$("body").prepend(tableofcontents);
 	</script>
-	<script type="text/javascript" src="waypoints.min.js"></script>
+	/* <script type="text/javascript" src="waypoints.min.js"></script>
 	<script type="text/javascript">
 		$('ul.table-of-contents li a[href*=#]').click(function(){
 			var full_url = this.href,
@@ -231,22 +231,6 @@
 				scrollTop:target_top}, 400);
 			return false;
 		});
-	</script>
-	<!-- an alternate way to invoke waypoints.js
-	<script type="text/javascript">
-		var main = $('html');		
-		$('ul.table-of-contents li a').click(function(event) {
-			event.preventDefault();
-			var full_url = this.href,
-				parts = full_url.split('#'),
-				trgt = parts[1],
-				target_offset = $('#'+trgt).offset(),
-				target_top = target_offset.top;		
-			$('body .main').animate({scrollTop:target_top},400);
-			main.children().removeClass();
-			$(this).parent().addClass('active');
-		});
-	</script>
-	-->
+	</script> */
 </body>
 </html>
